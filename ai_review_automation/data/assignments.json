@@ -1,0 +1,34 @@
+[
+  {
+    "assignment_id": "ASG-20261026133840757535",
+    "candidate_name": "Ram",
+    "candidate_email": "ramanujanr51@gmail.com",
+    "task_title": "Thread-Safe In-Memory Order Management System",
+    "task": {
+      "task_id": "JAVA-BE-COLL-01",
+      "title": "Thread-Safe In-Memory Order Management System",
+      "role": "Backend",
+      "skill_level": "java",
+      "topic": "collections",
+      "description": "Design and implement an in-memory order processing engine for a high-frequency trading simulation. The engine must process incoming orders based on priority, provide fast ID-based lookups, track historical operations, and maintain top high-value orders dynamically using Java Collections Framework.",
+      "requirements": [
+        "Implement an OrderService class that uses ConcurrentHashMap to store and retrieve orders by unique String orderID in O(1) time complexity.",
+        "Maintain a PriorityQueue for active pending orders, prioritized by an OrderPriority enum (HIGH, MEDIUM, LOW) and secondary tie-breaker by insertion timestamp.",
+        "Implement a least-recently-used (LRU) order history log using LinkedHashMap with access-order enabled and a maximum capacity of 100 entries.",
+        "Provide a method getTopNOrdersByValue(int n) that returns the top N highest-value orders without sorting the entire collection on every invocation.",
+        "Ensure all operations mutating the collection state are thread-safe and verified using multi-threaded JUnit tests."
+      ],
+      "deliverables": [
+        "Java source code containing models, custom comparators, and the core OrderService implementation.",
+        "JUnit 5 unit test suite covering priority ordering, LRU eviction behavior, edge cases, and thread safety.",
+        "README document explaining collection choices and big-O time/space complexities for each method."
+      ],
+      "estimated_hours": 3,
+      "active": true
+    },
+    "task_source": "Gemini-generated",
+    "deadline": "2026-11-02T17:00",
+    "created_at": "2026-10-26T13:38:40",
+    "email_status": "failed: Connection unexpectedly closed"
+  }
+]
